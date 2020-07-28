@@ -1,9 +1,7 @@
 package costanzo;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.World;
+import org.bukkit.*;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Zombie;
 
@@ -65,7 +63,6 @@ public class Zombies {
         if(isComplete != true) {
             toSpawnTot += spawnRates.get(count);
             for (int i = 0; i < spawnRates.get(count); i++) {
-                util.broadcast(ChatColor.GREEN,"I: " + i + " Spawn rates: " + spawnRates.get(count));
                 Zombie x = (Zombie) w.spawnEntity(spawn.randomLocation(spawnPoints), EntityType.ZOMBIE);
                 zombieList.add(x);
             }

@@ -17,7 +17,7 @@ public class Game extends BukkitRunnable {
 
         Main.getInstance().spawn(round);
         if(round%5 == 0){
-            //checkDogs()
+            checkDogs();
         }else{
             checkZombies();
         }
@@ -39,6 +39,25 @@ public class Game extends BukkitRunnable {
                 Main.getInstance().round++;
                 util.broadcast(ChatColor.GREEN, "-- Round " + Main.getInstance().round + " --");
                 Main.getInstance().zombie.toSpawnTot = 0;
+            }
+        }
+    }
+
+    public void checkDogs(){
+        ArrayList<Wolf> x = Main.getInstance().dogs.wolfList;
+
+        if(Main.getInstance().dogs.isComplete == true) {
+            int total = x.size();
+            int current = 0;
+            for (Wolf b : x) {
+                if (b.isDead()) {
+                    current++;
+                }
+            }
+            if (total == current) {
+                Main.getInstance().round++;
+                util.broadcast(ChatColor.GREEN, "-- Round " + Main.getInstance().round + " --");
+                Main.getInstance().dogs.totalSpawned = 0;
             }
         }
     }

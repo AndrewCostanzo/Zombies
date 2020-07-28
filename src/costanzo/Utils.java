@@ -63,4 +63,12 @@ public class Utils {
         }
         return 0L;
     }
+
+    public static Player getRandomPlayer(){
+        List<Player> players = new ArrayList<>();
+        for(Player p: Bukkit.getOnlinePlayers()){
+            players.add(p);
+        }
+        return players.get((int)(Math.random() * Bukkit.getOnlinePlayers().size()));
+    }
 }

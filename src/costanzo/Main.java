@@ -64,7 +64,7 @@ public class Main extends JavaPlugin implements Listener{
         if(command.equals("start")){
             round=1; //set initial round
             zombie = new Zombies(util, w);
-            dogs =  new Dogs(w);
+            dogs = new Dogs(util,w);
             x.runTaskTimer(getInstance(),0,200);
         }
 
@@ -89,10 +89,11 @@ public class Main extends JavaPlugin implements Listener{
      */
     public void spawn(int r){
         if(r%5 == 0){
-            //dogs.spawnDogs(r);
+            dogs.spawnDogs(r);
             zombie.isComplete = false;
         }else{
             zombie.spawnZombies(r);
+            dogs.isComplete = false;
         }
     }
 
