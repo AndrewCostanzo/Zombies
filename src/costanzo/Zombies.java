@@ -1,11 +1,10 @@
 package costanzo;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Location;
-import org.bukkit.World;
+import org.bukkit.*;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Zombie;
+import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 
@@ -67,6 +66,8 @@ public class Zombies {
             for (int i = 0; i < spawnRates.get(count); i++) {
                 util.broadcast(ChatColor.GREEN,"I: " + i + " Spawn rates: " + spawnRates.get(count));
                 Zombie x = (Zombie) w.spawnEntity(spawn.randomLocation(spawnPoints), EntityType.ZOMBIE);
+                //x.getWorld().dropItem(x.getLocation(), new ItemStack(Material.))
+
                 zombieList.add(x);
             }
             count++;

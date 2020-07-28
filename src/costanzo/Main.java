@@ -29,7 +29,7 @@ public class Main extends JavaPlugin implements Listener{
     public static Main instance;
 
     public static Zombies zombie;
-    public static Dogs dogs;
+    //public static Dogs dogs;
 
     public static Box box = new Box(util);
     public static Spawns spawn = new Spawns();
@@ -64,7 +64,7 @@ public class Main extends JavaPlugin implements Listener{
         if(command.equals("start")){
             round=1; //set initial round
             zombie = new Zombies(util, w);
-            dogs =  new Dogs(w);
+            //dogs =  new Dogs(w);
             x.runTaskTimer(getInstance(),0,200);
         }
 
