@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="BuildTools">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Desktop/Server2/BuildTools.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Server2/craftbukkit-1.12.2.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Server2/spigot-1.12.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Desktop/Server2/craftbukkit-1.12.2.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/Server2/spigot-1.12.2.jar!/" />
+    </SOURCES>
+  </library>
+</component>

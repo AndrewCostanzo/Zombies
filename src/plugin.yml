@@ -1,0 +1,14 @@
+name: Main
+main: costanzo.Main
+version: 0.0.1
+description: A basic zombies plugin.
+commands:
+    start:
+      description: Start the game
+      usage: /<command>
+    stopz:
+      description: Stop the game of zombies
+      usage: /<command>
+    mysterybox:
+      description: Open the mystery box
+      usage: /<command>
